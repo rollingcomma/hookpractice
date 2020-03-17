@@ -1,0 +1,16 @@
+{
+  "name": "proj",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "pretty": "prettier --write --tab-width 4 \"./**/*.js\"",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty && npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
